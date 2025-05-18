@@ -1,3 +1,5 @@
+const { use } = require("react")
+
 const name = "shreya"
 const salary = new String ('60lpa')
 
@@ -25,7 +27,82 @@ let mytimestamp = Date.now()
 // console.log(Math.floor(mydate/1000));
 
 let newDate = new Date()
-console.log(newDate.toLocaleString('default'{weekday:"long"}))
+// console.log(newDate.toLocaleString('default',{weekday:"long"}))
+
+const sym= Symbol("key1")
+
+const studentDetails = {
+    name: "shreya",
+    age: 20,
+    [sym]: "mykey",
+    cllg: "cu",
+    contact: 3349423,
+    lastloggin: ["monday", "thursday"]
+}
+
+// console.log(studentDetails["name"]);
+// console.log(studentDetails["lastloggin"]);
+// console.log(studentDetails[sym]);
+// console.log(typeof studentDetails[sym]);
+// console.log(typeof sym);
+
+studentDetails.age = 21
+// console.log(studentDetails["age"]);
+
+// Object.freeze(studentDetails)
+
+studentDetails.greet = function() {
+    console.log("Welcome to JS");
+}
+// console.log(studentDetails.greet());
+
+studentDetails.greetAgain = function() {
+    console.log(`Welcome to JS, ${this.name}`);
+    
+}
+// console.log(studentDetails.greetAgain());
+
+const user = {}
+user.id = 1324
+user.name = "sus"
+user.loggedin = false
+
+// console.log(Object.keys(user));
+// console.log(Object.values(user));
+
+
+
+// console.log(user);
+
+const joint = Object.assign({}, studentDetails, user)
+const obj = {...studentDetails, ...user}
+
+// console.log(joint);
+// console.log(obj);
+
+// console.log(user.hasOwnProperty('loggedin'));   works with react
+
+const {contact} = studentDetails
+// console.log(contact); works with react
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
