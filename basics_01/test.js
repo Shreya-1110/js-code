@@ -85,6 +85,16 @@ const obj = {...studentDetails, ...user}
 const {contact} = studentDetails
 // console.log(contact); works with react
 
+function addition(num1, num2){
+    let result = num1+num2
+    return result
+}
+
+const result= addition(23254,3432324)
+// console.log("result is: ", result); needs react(vs code)
+
+
+
 
 
 
